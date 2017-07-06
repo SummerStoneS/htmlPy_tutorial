@@ -1,0 +1,24 @@
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.css" type="text/css"> </head>
+    <body>
+
+        <form id="form">
+    <input type="file" id="file" name="file">
+    <a href="#" class="btn" id="form_submit">Submit</a>
+</form>
+<h1>{{username}}</h1>
+        <div class="table"></div>
+              <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+  <script src="https://pingendo.com/assets/bootstrap/bootstrap-4.0.0-alpha.6.min.js"></script>
+    <script>
+        $("#form_submit").click(function(){
+            $(".table").html(Backend.show_table($("#file_path").val()));
+        });
+    </script>
+    </body>
+</html>
